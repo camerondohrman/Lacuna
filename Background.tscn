@@ -1,0 +1,85 @@
+[gd_scene load_steps=18 format=3 uid="uid://c0gkf6pubg6yf"]
+
+[ext_resource type="Texture2D" uid="uid://qw72jqdjmj8c" path="res://PNG/Background/0.png" id="1_7ncpn"]
+[ext_resource type="Texture2D" uid="uid://rpksxpx07hsw" path="res://PNG/Background/1.png" id="2_poyhf"]
+[ext_resource type="Texture2D" uid="uid://cjqt4rlk7jj0s" path="res://PNG/Background/2.png" id="3_1pdd2"]
+[ext_resource type="Texture2D" uid="uid://clsakbq4djeen" path="res://PNG/Background/3.png" id="4_1jpsx"]
+[ext_resource type="Texture2D" uid="uid://jm1odvvxfi0a" path="res://PNG/Background/4.png" id="5_k6ov2"]
+[ext_resource type="Texture2D" uid="uid://qqycamyda8m0" path="res://PNG/Background/5.png" id="6_5y1xn"]
+[ext_resource type="Texture2D" uid="uid://b826c27snmtoq" path="res://PNG/Background/6.png" id="7_qkcfv"]
+[ext_resource type="Texture2D" uid="uid://byunfkmog6d8u" path="res://PNG/Background/7.png" id="8_mnuuk"]
+[ext_resource type="Texture2D" uid="uid://b4ejrt6mfxy2b" path="res://PNG/Background/8.png" id="9_jrh4u"]
+[ext_resource type="Texture2D" uid="uid://cqv5id0tuydyi" path="res://PNG/Background/9.png" id="10_wl0uh"]
+[ext_resource type="Texture2D" uid="uid://bitcq6do336xp" path="res://PNG/Background/10.png" id="11_l5g0g"]
+[ext_resource type="Texture2D" uid="uid://cd2j030vmkojh" path="res://PNG/Background/11.png" id="12_8ydna"]
+[ext_resource type="Texture2D" uid="uid://dkx1tn5f1dbh7" path="res://PNG/Background/12.png" id="13_c5xxb"]
+[ext_resource type="Texture2D" uid="uid://dvh86cou15rx8" path="res://PNG/Background/13.png" id="14_38mah"]
+[ext_resource type="Texture2D" uid="uid://dk1v2dcle5t1r" path="res://PNG/Background/14.png" id="15_wpbeh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8jyec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ncpn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_poyhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1pdd2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jpsx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k6ov2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5y1xn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qkcfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_mnuuk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jrh4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_wl0uh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_l5g0g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_8ydna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c5xxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_38mah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wpbeh")
+}],
+"loop": true,
+"name": &"Shimmer",
+"speed": 0.0
+}]
+
+[sub_resource type="GDScript" id="GDScript_u7daa"]
+script/source = "extends AnimatedSprite2D
+
+func _process(_delta):
+	var temp = int(round(get_global_mouse_position()[0]/(float(1920)/float(sprite_frames.get_frame_count(\"Shimmer\")))))
+	if range(sprite_frames.get_frame_count(\"Shimmer\")).has(temp):
+		frame = 14 - temp
+"
+
+[node name="Backgorund" type="AnimatedSprite2D"]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_8jyec")
+animation = &"Shimmer"
+script = SubResource("GDScript_u7daa")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://xomy22fe5cfd"]
+
+[ext_resource type="Script" path="res://Scripts/Potential.gd" id="1_2t0kc"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Flowers/flowercollider.tres" id="2_lyclc"]
+
+[node name="aipotential" type="Area2D" groups=["ai", "valid"]]
+script = ExtResource("1_2t0kc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_lyclc")

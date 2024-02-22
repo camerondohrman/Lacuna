@@ -1,0 +1,69 @@
+[gd_scene load_steps=15 format=3 uid="uid://cqjoe6dd0ivuh"]
+
+[ext_resource type="PackedScene" uid="uid://c0gkf6pubg6yf" path="res://Background.tscn" id="1_8hm0a"]
+[ext_resource type="PackedScene" uid="uid://j4ik53oc07ts" path="res://Inventory.tscn" id="1_bg6qw"]
+[ext_resource type="Texture2D" uid="uid://csoodq6pnghyh" path="res://PNG/Player 1 Pawn.png" id="2_rc3du"]
+[ext_resource type="Texture2D" uid="uid://0awhuwp8cwt2" path="res://PNG/Pause.png" id="4_tjvt4"]
+[ext_resource type="Texture2D" uid="uid://cmog0jss54js2" path="res://PNG/Quit.png" id="5_5r45f"]
+[ext_resource type="Script" path="res://Scripts/Button.gd" id="6_lwd8n"]
+[ext_resource type="AudioStream" uid="uid://c73o85ftm2kdd" path="res://Audio/Cancel.wav" id="7_bgond"]
+[ext_resource type="AudioStream" uid="uid://dac1xo20n726v" path="res://Audio/C4 Long.wav" id="8_5qq0l"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jnjwf"]
+load_path = "res://.godot/imported/Player 2 Pawn.png-86727d3d9d9e13dedd72b8d31ca75bb9.ctex"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jh65"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4fk6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l8n2o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1lgt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk6r3"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Backgorund" parent="." instance=ExtResource("1_8hm0a")]
+
+[node name="Inventory" parent="." instance=ExtResource("1_bg6qw")]
+
+[node name="Player1Pawn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = ExtResource("2_rc3du")
+
+[node name="Player2Pawn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(960, 540)
+texture = SubResource("CompressedTexture2D_jnjwf")
+
+[node name="PauseMenu" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("4_tjvt4")
+
+[node name="Button" type="Button" parent="PauseMenu"]
+anchors_preset = -1
+anchor_left = 0.249
+anchor_top = 0.25
+anchor_right = 0.249
+anchor_bottom = 0.25
+offset_left = -65.16
+offset_top = -1602.0
+offset_right = 442.84
+offset_bottom = -1094.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7jh65")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i4fk6")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_l8n2o")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_w1lgt")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yk6r3")
+icon = ExtResource("5_5r45f")
+script = ExtResource("6_lwd8n")
+
+[node name="Cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_bgond")
+
+[node name="Round End" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_5qq0l")
+
+[connection signal="pressed" from="PauseMenu/Button" to="PauseMenu/Button" method="_on_pressed"]

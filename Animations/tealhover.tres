@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bmgldgk5ai78"]
+
+[ext_resource type="Texture2D" uid="uid://bi2gal7p8f4r5" path="res://PNG/Planets/Teal/Teal Planet 0.png" id="1_c86mn"]
+[ext_resource type="Texture2D" uid="uid://wnonjxviyxq3" path="res://PNG/Planets/Teal/Teal Planet 1.png" id="2_u22ra"]
+[ext_resource type="Texture2D" uid="uid://np6ptl24rdil" path="res://PNG/Planets/Teal/Teal Planet 2.png" id="3_1feuq"]
+[ext_resource type="Texture2D" uid="uid://durh61o1cqd2f" path="res://PNG/Planets/Teal/Teal Planet 3.png" id="4_hv1ha"]
+[ext_resource type="Texture2D" uid="uid://bocxv05uojprc" path="res://PNG/Planets/Teal/Teal Planet 4.png" id="5_r718s"]
+[ext_resource type="Texture2D" uid="uid://slq1nwxl4vk0" path="res://PNG/Planets/Teal/Teal Planet 5.png" id="6_2rani"]
+[ext_resource type="Texture2D" uid="uid://bolsjhambwgyj" path="res://PNG/Planets/Teal/Teal Planet 6.png" id="7_iejwu"]
+[ext_resource type="Texture2D" uid="uid://d0k5let8tj3vm" path="res://PNG/Planets/Teal/Teal Planet 7.png" id="8_wnf37"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c86mn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_u22ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1feuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hv1ha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_r718s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2rani")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iejwu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wnf37")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]

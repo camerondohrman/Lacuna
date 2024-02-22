@@ -1,0 +1,11 @@
+Minimum viable product complete
+-Unidentified bug, something gets screwed up when you select a planet while the ai is moving
+-ai loses too frequently
+-ai can only be second player
+-menu looks like shit
+-no accessability options
+-no controller support
+-no sound
+-no multiplayer
+-code is really nasty
+-no distrubution

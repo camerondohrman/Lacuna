@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://blxymasjqfdtq"]
+
+[ext_resource type="Texture2D" uid="uid://l6enudf6sckd" path="res://PNG/Border.png" id="1_p0shl"]
+[ext_resource type="Script" path="res://Scripts/Border.gd" id="2_1mq31"]
+[ext_resource type="AudioStream" uid="uid://tti6rouofuua" path="res://Audio/C3 Long.wav" id="3_ee0i4"]
+
+[node name="Border" type="Sprite2D"]
+position = Vector2(960, 540)
+texture = ExtResource("1_p0shl")
+script = ExtResource("2_1mq31")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ee0i4")
+autoplay = true

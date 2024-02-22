@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://6jxqh3687eji"]
+
+[ext_resource type="Texture2D" uid="uid://bwk7qnjlkrrwp" path="res://PNG/Planets/Red/Red Planet 0.png" id="1_f8m7v"]
+[ext_resource type="Texture2D" uid="uid://bbhlis5157xtj" path="res://PNG/Planets/Red/Red Planet 1.png" id="2_4e5df"]
+[ext_resource type="Texture2D" uid="uid://b33k27xs6x6ee" path="res://PNG/Planets/Red/Red Planet 2.png" id="3_vue8q"]
+[ext_resource type="Texture2D" uid="uid://i77v621a1xnn" path="res://PNG/Planets/Red/Red Planet 3.png" id="4_qdfr8"]
+[ext_resource type="Texture2D" uid="uid://bgr2hm34nu2eh" path="res://PNG/Planets/Red/Red Planet 4.png" id="5_fluxu"]
+[ext_resource type="Texture2D" uid="uid://cfn7ks5dhn27l" path="res://PNG/Planets/Red/Red Planet 5.png" id="6_sc2m6"]
+[ext_resource type="Texture2D" uid="uid://r2fkrirasii8" path="res://PNG/Planets/Red/Red Planet 6.png" id="7_msqnu"]
+[ext_resource type="Texture2D" uid="uid://4ibg81o7ottj" path="res://PNG/Planets/Red/Red Planet 7.png" id="8_27h2t"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f8m7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4e5df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_vue8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_qdfr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fluxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sc2m6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_msqnu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_27h2t")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]

@@ -1,0 +1,437 @@
+[gd_scene load_steps=10 format=3 uid="uid://j4ik53oc07ts"]
+
+[ext_resource type="Texture2D" uid="uid://dseqv06jhemak" path="res://PNG/Inv.png" id="1_3stef"]
+[ext_resource type="Script" path="res://Scripts/Inventory.gd" id="2_lexsh"]
+[ext_resource type="SpriteFrames" uid="uid://dmjh0btlwiunq" path="res://Animations/purplehover.tres" id="2_syfv1"]
+[ext_resource type="SpriteFrames" uid="uid://bn1bnw0too7m7" path="res://Animations/bluehover.tres" id="3_obu48"]
+[ext_resource type="SpriteFrames" uid="uid://c2tmd7ewpp2ir" path="res://Animations/greenhover.tres" id="4_m5bmn"]
+[ext_resource type="SpriteFrames" uid="uid://ccj0ciq3r3pd3" path="res://Animations/greyhover.tres" id="5_hl3qb"]
+[ext_resource type="SpriteFrames" uid="uid://cas77i3grfu1k" path="res://Animations/orangehover.tres" id="6_c7xw7"]
+[ext_resource type="SpriteFrames" uid="uid://6jxqh3687eji" path="res://Animations/redhover.tres" id="8_gxnx7"]
+[ext_resource type="SpriteFrames" uid="uid://bmgldgk5ai78" path="res://Animations/tealhover.tres" id="9_ncgm7"]
+
+[node name="Inventory" type="Node2D"]
+
+[node name="player0" type="Node2D" parent="."]
+
+[node name="blue" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(165, 150)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/blue"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/blue"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/blue"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/blue"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="green" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(476, 126)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/green"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/green"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/green"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/green"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="grey" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(320, 354)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/grey"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/grey"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/grey"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/grey"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="orange" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(148, 532)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/orange"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/orange"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/orange"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/orange"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="purple" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(316, 728)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/purple"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/purple"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/purple"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/purple"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="red" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(165, 928)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/red"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/red"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/red"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/red"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="teal" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(474, 948)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player0/teal"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player0/teal"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player0/teal"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player0/teal"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="player1" type="Node2D" parent="."]
+
+[node name="blue" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1755, 150)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/blue"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/blue"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/blue"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/blue"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("3_obu48")
+animation = &"Hover"
+
+[node name="green" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1464, 126)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/green"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/green"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/green"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/green"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("4_m5bmn")
+animation = &"Hover"
+
+[node name="grey" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1608, 338)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/grey"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/grey"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/grey"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/grey"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("5_hl3qb")
+animation = &"Hover"
+
+[node name="orange" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1764, 522)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/orange"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/orange"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/orange"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/orange"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("6_c7xw7")
+animation = &"Hover"
+
+[node name="purple" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1602, 720)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/purple"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/purple"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/purple"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/purple"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("2_syfv1")
+animation = &"Hover"
+
+[node name="red" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1755, 924)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/red"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/red"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/red"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/red"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("8_gxnx7")
+animation = &"Hover"
+
+[node name="teal" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(1480, 946)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="planet1" type="AnimatedSprite2D" parent="player1/teal"]
+position = Vector2(0, 50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="planet2" type="AnimatedSprite2D" parent="player1/teal"]
+position = Vector2(0, -50)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="planet3" type="AnimatedSprite2D" parent="player1/teal"]
+position = Vector2(50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"
+
+[node name="planet4" type="AnimatedSprite2D" parent="player1/teal"]
+position = Vector2(-50, 0)
+scale = Vector2(1e-05, 1e-05)
+sprite_frames = ExtResource("9_ncgm7")
+animation = &"Hover"

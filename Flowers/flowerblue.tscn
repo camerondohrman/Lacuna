@@ -1,0 +1,66 @@
+[gd_scene load_steps=14 format=3 uid="uid://by43dnfw1gfli"]
+
+[ext_resource type="Script" path="res://Scripts/Flower.gd" id="1_45nr3"]
+[ext_resource type="Texture2D" uid="uid://cbaqgyal6v3ys" path="res://PNG/Planets/Blue/Blue Planet 1.png" id="2_1v452"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Flowers/flowercollider.tres" id="2_70v4m"]
+[ext_resource type="Texture2D" uid="uid://dsyvg6we4c3a3" path="res://PNG/Planets/Blue/Blue Planet 0.png" id="2_juxo3"]
+[ext_resource type="Texture2D" uid="uid://kq408evgp2sb" path="res://PNG/Planets/Blue/Blue Planet 2.png" id="3_bcomi"]
+[ext_resource type="Texture2D" uid="uid://oxb5arc2ne73" path="res://PNG/Planets/Blue/Blue Planet 3.png" id="4_t0sx1"]
+[ext_resource type="Texture2D" uid="uid://c1q0godq5yvas" path="res://PNG/Planets/Blue/Blue Planet 4.png" id="5_b2b82"]
+[ext_resource type="Texture2D" uid="uid://ckg55tqqsnjoi" path="res://PNG/Planets/Blue/Blue Planet 5.png" id="6_i0mn3"]
+[ext_resource type="Texture2D" uid="uid://dsa671mq3dn4r" path="res://PNG/Planets/Blue/Blue Planet 7.png" id="7_sbuen"]
+[ext_resource type="Texture2D" uid="uid://y5jqm2pkat5e" path="res://PNG/Planets/Blue/Blue Planet 6.png" id="8_1luvi"]
+[ext_resource type="AudioStream" uid="uid://bj0v34nv15r7w" path="res://Audio/blue.wav" id="11_28or6"]
+[ext_resource type="AudioStream" uid="uid://c7nn2dy548mve" path="res://Audio/E3 Long.wav" id="12_skka7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_klnxp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_juxo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_1v452")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bcomi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t0sx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b2b82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_i0mn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_1luvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_sbuen")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]
+
+[node name="flower" type="Area2D" groups=["blue", "flower"]]
+script = ExtResource("1_45nr3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_70v4m")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_klnxp")
+animation = &"Hover"
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_28or6")
+
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_skka7")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

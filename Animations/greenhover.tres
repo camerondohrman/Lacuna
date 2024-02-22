@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://c2tmd7ewpp2ir"]
+
+[ext_resource type="Texture2D" uid="uid://id0ekfoa8wdl" path="res://PNG/Planets/Green/Green Planet 0.png" id="1_u4u5m"]
+[ext_resource type="Texture2D" uid="uid://bc5r24k8ymdc3" path="res://PNG/Planets/Green/Green Planet 1.png" id="2_etreq"]
+[ext_resource type="Texture2D" uid="uid://dqay24cj63v5d" path="res://PNG/Planets/Green/Green Planet 2.png" id="3_562ue"]
+[ext_resource type="Texture2D" uid="uid://cxh6jklg6rnjc" path="res://PNG/Planets/Green/Green Planet 3.png" id="4_fbtcp"]
+[ext_resource type="Texture2D" uid="uid://bms0gw2v0huna" path="res://PNG/Planets/Green/Green Planet 4.png" id="5_lasat"]
+[ext_resource type="Texture2D" uid="uid://q8gqyy66t2td" path="res://PNG/Planets/Green/Green Planet 5.png" id="6_ydqcl"]
+[ext_resource type="Texture2D" uid="uid://dpv85x8km4d1m" path="res://PNG/Planets/Green/Green Planet 6.png" id="7_yn7x5"]
+[ext_resource type="Texture2D" uid="uid://bgrux4bnh0tf8" path="res://PNG/Planets/Green/Green Planet 7.png" id="8_lbm3e"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u4u5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_etreq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_562ue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fbtcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lasat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ydqcl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_yn7x5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_lbm3e")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkt36mm2r3pyb"]
+
+[ext_resource type="PackedScene" uid="uid://bn6nsts2fpnl6" path="res://flower.tscn" id="1_rhngp"]
+[ext_resource type="PackedScene" uid="uid://dbof6jdtp4ver" path="res://blocked.tscn" id="2_l8x32"]
+
+[node name="Main" type="Node2D"]
+
+[node name="flower" parent="." instance=ExtResource("1_rhngp")]
+position = Vector2(990, 179)
+
+[node name="flower2" parent="." instance=ExtResource("1_rhngp")]
+position = Vector2(200, 183)
+
+[node name="flower3" parent="." instance=ExtResource("1_rhngp")]
+position = Vector2(591, 467)
+
+[node name="blocked" parent="." instance=ExtResource("2_l8x32")]
+position = Vector2(594, 188)

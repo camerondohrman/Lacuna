@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bn1bnw0too7m7"]
+
+[ext_resource type="Texture2D" uid="uid://dsyvg6we4c3a3" path="res://PNG/Planets/Blue/Blue Planet 0.png" id="1_opdqn"]
+[ext_resource type="Texture2D" uid="uid://cbaqgyal6v3ys" path="res://PNG/Planets/Blue/Blue Planet 1.png" id="2_2im2q"]
+[ext_resource type="Texture2D" uid="uid://kq408evgp2sb" path="res://PNG/Planets/Blue/Blue Planet 2.png" id="3_hmso1"]
+[ext_resource type="Texture2D" uid="uid://oxb5arc2ne73" path="res://PNG/Planets/Blue/Blue Planet 3.png" id="4_0cl6p"]
+[ext_resource type="Texture2D" uid="uid://c1q0godq5yvas" path="res://PNG/Planets/Blue/Blue Planet 4.png" id="5_pxroi"]
+[ext_resource type="Texture2D" uid="uid://ckg55tqqsnjoi" path="res://PNG/Planets/Blue/Blue Planet 5.png" id="6_1lctc"]
+[ext_resource type="Texture2D" uid="uid://y5jqm2pkat5e" path="res://PNG/Planets/Blue/Blue Planet 6.png" id="7_cjwec"]
+[ext_resource type="Texture2D" uid="uid://dsa671mq3dn4r" path="res://PNG/Planets/Blue/Blue Planet 7.png" id="8_wfpw4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_opdqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2im2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hmso1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_0cl6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pxroi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1lctc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_cjwec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wfpw4")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]

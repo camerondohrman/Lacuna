@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://cas77i3grfu1k"]
+
+[ext_resource type="Texture2D" uid="uid://cc6oo6280lhfs" path="res://PNG/Planets/Orange/Orange Planet 0.png" id="1_vd217"]
+[ext_resource type="Texture2D" uid="uid://dpo1igdi0bpep" path="res://PNG/Planets/Orange/Orange Planet 1.png" id="2_22bc6"]
+[ext_resource type="Texture2D" uid="uid://3l3n4wm7x6i5" path="res://PNG/Planets/Orange/Orange Planet 2.png" id="3_4uspe"]
+[ext_resource type="Texture2D" uid="uid://dvbvf146mvbbv" path="res://PNG/Planets/Orange/Orange Planet 3.png" id="4_ohpws"]
+[ext_resource type="Texture2D" uid="uid://dtkestodhgecu" path="res://PNG/Planets/Orange/Orange Planet 4.png" id="5_3ysxb"]
+[ext_resource type="Texture2D" uid="uid://b13ebb7bbl22u" path="res://PNG/Planets/Orange/Orange Planet 5.png" id="6_5emtt"]
+[ext_resource type="Texture2D" uid="uid://dycljeqnh3s18" path="res://PNG/Planets/Orange/Orange Planet 6.png" id="7_0dkr8"]
+[ext_resource type="Texture2D" uid="uid://bhjkbf22oao74" path="res://PNG/Planets/Orange/Orange Planet 7.png" id="8_o5uid"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vd217")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_22bc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4uspe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ohpws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3ysxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5emtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0dkr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o5uid")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]
