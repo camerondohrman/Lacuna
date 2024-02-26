@@ -16,4 +16,4 @@ During any of these steps, you can right click to cancel your selection.
 The opponent will automatically move on its turn, and the game will automatically reset itself after end game scoring.
 Press escape to reveal a menu that currently has no functionality.
 I have zero license on this project, all assets and functionality are credited to me.
-Credit to CYMK for the concept and rules.
+Credit to CMYK for the concept and rules.
