@@ -42,7 +42,7 @@ func _physics_process(_delta):
 			selectable = false
 			legalplacement = Line2D.new()
 			legalplacement.default_color = Color.MISTY_ROSE
-			legalplacement.width = 5
+			legalplacement.width = 10
 			legalplacement.antialiased = true
 			legalplacement.points = PackedVector2Array([0,Global.select.position-position])
 			legalplacement.add_to_group("legalplacement")
