@@ -1,6 +1,6 @@
-Download link: https://download-directory.github.io/?url=https://github.com/camerondohrman/Lacuna/tree/master/Export  
-How to play Lacuna:  
-  Lacuna is an abstract strategy game for two players. You will complete to collect 49 planets randomly placed on a circular board.  
+Download link: https://download-directory.github.io/?url=https://github.com/camerondohrman/Liminal/tree/master/Export  
+How to play:  
+  Liminal is an abstract strategy game for two players. You will complete to collect 49 planets randomly placed on a circular board.  
   There are seven planets in seven colors.  
   The first player collects one random planet as compensation for going first.  
   The players take turns placing pawns on the board, pawns must be placed on an uninterrupted line that connects two planets of the same color. When the pawn is placed, the player collects the two connected planets.  
@@ -16,4 +16,4 @@ How to use my app:
   The opponent will automatically move on its turn, and the game will automatically reset itself after end game scoring.  
   Press escape to reveal a menu that currently has no functionality.  
 I have zero license on this project, all assets and functionality are credited to me.  
-Credit to CYMK for the concept and rules.  
+Credit to CMYK for the rules.  
