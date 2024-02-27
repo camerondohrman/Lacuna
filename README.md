@@ -1,4 +1,4 @@
-Download link: https://download-directory.github.io/?url=https://github.com/camerondohrman/Lacuna/tree/master/Export  
+Download link: https://download-directory.github.io/?url=https://github.com/camerondohrman/Liminal/tree/master/Export  
 How to play Lacuna:  
   Lacuna is an abstract strategy game for two players. You will complete to collect 49 planets randomly placed on a circular board.  
   There are seven planets in seven colors.  
