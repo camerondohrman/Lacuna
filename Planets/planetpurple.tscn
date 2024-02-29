@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://b0nw50bxy1mg8"]
+
+[ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_nas27"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="2_1afhq"]
+[ext_resource type="SpriteFrames" uid="uid://dmjh0btlwiunq" path="res://Animations/purplehover.tres" id="3_vvfjt"]
+[ext_resource type="AudioStream" uid="uid://ba2yd56qbaudf" path="res://Audio/purple.wav" id="4_epu68"]
+[ext_resource type="AudioStream" uid="uid://4xdfqimbnb87" path="res://Audio/D4 Long.wav" id="5_wwuej"]
+
+[node name="planet" type="Area2D" groups=["planet", "purple"]]
+script = ExtResource("1_nas27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_1afhq")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+sprite_frames = ExtResource("3_vvfjt")
+animation = &"Hover"
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_epu68")
+
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wwuej")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

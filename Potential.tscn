@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://xomy22fe5cfd"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Potential.gd" id="1_2t0kc"]
-[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Flowers/flowercollider.tres" id="2_lyclc"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="2_lyclc"]
 
 [node name="aipotential" type="Area2D" groups=["ai", "valid"]]
 script = ExtResource("1_2t0kc")

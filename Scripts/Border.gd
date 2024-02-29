@@ -1,11 +1,11 @@
 extends Sprite2D
-var purple = preload("res://Flowers/flowerpurple.tscn")
-var red = preload("res://Flowers/flowerred.tscn")
-var teal = preload("res://Flowers/flowerteal.tscn")
-var blue = preload("res://Flowers/flowerblue.tscn")
-var green = preload("res://Flowers/flowergreen.tscn")
-var grey = preload("res://Flowers/flowergrey.tscn")
-var orange = preload("res://Flowers/flowerorange.tscn")
+var purple = preload("res://Planets/planetpurple.tscn")
+var red = preload("res://Planets/planetred.tscn")
+var teal = preload("res://Planets/planetteal.tscn")
+var blue = preload("res://Planets/planetblue.tscn")
+var green = preload("res://Planets/planetgreen.tscn")
+var grey = preload("res://Planets/planetgrey.tscn")
+var orange = preload("res://Planets/planetorange.tscn")
 func _ready():
 	randomize()
 	rotation_degrees = randf_range(0,360)
@@ -45,6 +45,13 @@ func _ready():
 		purpleinst.position = temp
 		add_child(purpleinst)
 
+#To visualize goodspot
+#	for a in goodspot.size():
+#		var temp = goodspot.pop_front()
+#		var purpleinst = purple.instantiate()
+#		purpleinst.position = temp
+#		add_child(purpleinst)
+
 	scale = Vector2.ZERO
 	var tween = get_tree().create_tween()
 	tween.tween_property(self, "scale", Vector2(1,1), 5).set_trans(Tween.TRANS_QUAD)
@@ -54,7 +61,8 @@ func _ready():
 func allset():
 	Global.allset = true
 
+var rotating
 func _physics_process(_delta):
-	if not Global.select && Global.allset:
+	if rotating && allset:
 		rotation += .0001
 		

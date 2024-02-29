@@ -1,0 +1,68 @@
+[gd_scene load_steps=14 format=3 uid="uid://js1skttg053"]
+
+[ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_sdlce"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="2_ok177"]
+[ext_resource type="Texture2D" uid="uid://cc6oo6280lhfs" path="res://PNG/Planets/Orange/Orange Planet 0.png" id="3_2pset"]
+[ext_resource type="Texture2D" uid="uid://dpo1igdi0bpep" path="res://PNG/Planets/Orange/Orange Planet 1.png" id="4_wqeye"]
+[ext_resource type="Texture2D" uid="uid://3l3n4wm7x6i5" path="res://PNG/Planets/Orange/Orange Planet 2.png" id="5_dmlda"]
+[ext_resource type="Texture2D" uid="uid://dvbvf146mvbbv" path="res://PNG/Planets/Orange/Orange Planet 3.png" id="6_3u3rg"]
+[ext_resource type="Texture2D" uid="uid://dtkestodhgecu" path="res://PNG/Planets/Orange/Orange Planet 4.png" id="7_5q8a1"]
+[ext_resource type="Texture2D" uid="uid://b13ebb7bbl22u" path="res://PNG/Planets/Orange/Orange Planet 5.png" id="8_pfea5"]
+[ext_resource type="Texture2D" uid="uid://dycljeqnh3s18" path="res://PNG/Planets/Orange/Orange Planet 6.png" id="9_b65u6"]
+[ext_resource type="Texture2D" uid="uid://bhjkbf22oao74" path="res://PNG/Planets/Orange/Orange Planet 7.png" id="10_gqape"]
+[ext_resource type="AudioStream" uid="uid://c72ey81m0i5k8" path="res://Audio/orange.wav" id="11_pjg5a"]
+[ext_resource type="AudioStream" uid="uid://dac1xo20n726v" path="res://Audio/C4 Long.wav" id="12_wqqc6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dmf75"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2pset")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wqeye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dmlda")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_3u3rg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_5q8a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pfea5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_b65u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gqape")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]
+
+[node name="planet" type="Area2D" groups=["orange", "planet"]]
+script = ExtResource("1_sdlce")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 2
+z_index = 2
+shape = ExtResource("2_ok177")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_dmf75")
+animation = &"Hover"
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_pjg5a")
+
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_wqqc6")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

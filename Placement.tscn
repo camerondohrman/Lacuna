@@ -1,7 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://blpidbafklqbl"]
+[gd_scene load_steps=6 format=3]
 
 [ext_resource type="Script" path="res://Scripts/Placement.gd" id="1_u3fpj"]
-[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Flowers/flowercollider.tres" id="2_i8gay"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="2_i8gay"]
 [ext_resource type="Texture2D" uid="uid://csoodq6pnghyh" path="res://PNG/Player 1 Pawn.png" id="2_oa3k7"]
 [ext_resource type="Texture2D" uid="uid://dyv4l7x6blj" path="res://PNG/Player 2 Pawn.png" id="3_kih2g"]
 [ext_resource type="AudioStream" uid="uid://4e2q8b16pp5w" path="res://Audio/D3 Long.wav" id="5_0xu05"]

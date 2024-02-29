@@ -1,11 +1,14 @@
 Minimum viable product complete
--Unidentified bug, something gets screwed up when you select a planet while the ai is moving
 -ai loses too frequently
 -ai can only be second player
--menu looks like shit
 -no accessability options
 -no controller support
--no sound
+-no mobile support
 -no multiplayer
 -code is really nasty
--no distrubution
+
+022724 - Two hours
+-Added reset button, and new spawn locations
+-Started working on stack resolution function which would help fix some of the physics bugs
+-Currently broken, stack resolution doesn't work, reset button does not have graphics
+-Tomorrow I will try to put in one hour after school

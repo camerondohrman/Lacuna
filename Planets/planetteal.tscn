@@ -1,0 +1,67 @@
+[gd_scene load_steps=14 format=3 uid="uid://lkg71im4m518"]
+
+[ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_ec3jv"]
+[ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="2_o81mu"]
+[ext_resource type="Texture2D" uid="uid://bi2gal7p8f4r5" path="res://PNG/Planets/Teal/Teal Planet 0.png" id="3_oj8f5"]
+[ext_resource type="Texture2D" uid="uid://wnonjxviyxq3" path="res://PNG/Planets/Teal/Teal Planet 1.png" id="4_wpbox"]
+[ext_resource type="Texture2D" uid="uid://np6ptl24rdil" path="res://PNG/Planets/Teal/Teal Planet 2.png" id="5_fclqt"]
+[ext_resource type="Texture2D" uid="uid://durh61o1cqd2f" path="res://PNG/Planets/Teal/Teal Planet 3.png" id="6_uukpl"]
+[ext_resource type="Texture2D" uid="uid://bocxv05uojprc" path="res://PNG/Planets/Teal/Teal Planet 4.png" id="7_k8b7s"]
+[ext_resource type="Texture2D" uid="uid://slq1nwxl4vk0" path="res://PNG/Planets/Teal/Teal Planet 5.png" id="8_0v0r8"]
+[ext_resource type="Texture2D" uid="uid://bolsjhambwgyj" path="res://PNG/Planets/Teal/Teal Planet 6.png" id="9_lh534"]
+[ext_resource type="Texture2D" uid="uid://d0k5let8tj3vm" path="res://PNG/Planets/Teal/Teal Planet 7.png" id="10_jx44i"]
+[ext_resource type="AudioStream" uid="uid://db4ya7ck3fw7l" path="res://Audio/teal.wav" id="11_2y21p"]
+[ext_resource type="AudioStream" uid="uid://blonymwwc0lqm" path="res://Audio/G4 Long.wav" id="12_b78vl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_07gir"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_oj8f5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wpbox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fclqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uukpl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_k8b7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0v0r8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lh534")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jx44i")
+}],
+"loop": true,
+"name": &"Hover",
+"speed": 15.0
+}]
+
+[node name="planet" type="Area2D" groups=["planet", "teal"]]
+script = ExtResource("1_ec3jv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_o81mu")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
+sprite_frames = SubResource("SpriteFrames_07gir")
+animation = &"Hover"
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_2y21p")
+
+[node name="hover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_b78vl")
+volume_db = -8.432
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
