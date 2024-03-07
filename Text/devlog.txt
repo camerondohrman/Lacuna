@@ -1,0 +1,35 @@
+Minimum viable product complete
+-ai loses too frequently
+-no accessability options
+-no controller support
+-no mobile support
+-no multiplayer
+-no safe download
+-no desktop icon
+
+022724 - Two hours
+-Added reset button, and new spawn locations
+-Started working on stack resolution function which would help fix some of the physics bugs
+-Currently broken, stack resolution doesn't work, reset button does not have graphics
+-Tomorrow I will try to put in one hour after school
+
+022924 - One Hour
+-Sort of did a playtest today as I showed a friend.
+They clealy struggled with the hitboxes, can't place pawns right next to eachother.
+They also thought it wasn't working when they clicked on a planet with zero connections.
+They also were confused when endgame scoring started.
+
+030224 - Two hours
+-Hitboxes corrected
+-Zero connections indication added
+-Remaining turns counter added
+-Beggining work on ai
+
+030324
+-In ten trials of the base ai, winrate was 5/5
+-In 100 trials, winrate was 55/45
+-After many interations in best of seven with a 10% adjustment rate
+[0.2, 0.8]
+[1, 0]
+[0.5, 0]
+[[0.4, 0.3, 0.5, 0.2, 0], [0, 0.9, 0.8, 1, 0]]

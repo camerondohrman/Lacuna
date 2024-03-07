@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://j4ik53oc07ts"]
+[gd_scene load_steps=12 format=3 uid="uid://j4ik53oc07ts"]
 
 [ext_resource type="Texture2D" uid="uid://dseqv06jhemak" path="res://PNG/Inv.png" id="1_3stef"]
 [ext_resource type="Script" path="res://Scripts/Inventory.gd" id="2_lexsh"]
@@ -9,6 +9,8 @@
 [ext_resource type="SpriteFrames" uid="uid://cas77i3grfu1k" path="res://Animations/orangehover.tres" id="6_c7xw7"]
 [ext_resource type="SpriteFrames" uid="uid://6jxqh3687eji" path="res://Animations/redhover.tres" id="8_gxnx7"]
 [ext_resource type="SpriteFrames" uid="uid://bmgldgk5ai78" path="res://Animations/tealhover.tres" id="9_ncgm7"]
+[ext_resource type="Texture2D" uid="uid://dyv4l7x6blj" path="res://PNG/Player 2 Pawn.png" id="11_b1xkp"]
+[ext_resource type="Texture2D" uid="uid://csoodq6pnghyh" path="res://PNG/Player 1 Pawn.png" id="11_ejst4"]
 
 [node name="Inventory" type="Node2D"]
 
@@ -224,6 +226,32 @@ scale = Vector2(1e-05, 1e-05)
 sprite_frames = ExtResource("9_ncgm7")
 animation = &"Hover"
 
+[node name="turncount" type="Sprite2D" parent="player0" groups=["inventory"]]
+position = Vector2(961, 540)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="0" type="Sprite2D" parent="player0/turncount"]
+position = Vector2(0, 50)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_b1xkp")
+
+[node name="1" type="Sprite2D" parent="player0/turncount"]
+position = Vector2(50, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_b1xkp")
+
+[node name="2" type="Sprite2D" parent="player0/turncount"]
+position = Vector2(-50, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_b1xkp")
+
+[node name="3" type="Sprite2D" parent="player0/turncount"]
+position = Vector2(0, -50)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_b1xkp")
+
 [node name="player1" type="Node2D" parent="."]
 
 [node name="blue" type="Sprite2D" parent="player1" groups=["inventory"]]
@@ -435,3 +463,29 @@ position = Vector2(-50, 0)
 scale = Vector2(1e-05, 1e-05)
 sprite_frames = ExtResource("9_ncgm7")
 animation = &"Hover"
+
+[node name="turncount" type="Sprite2D" parent="player1" groups=["inventory"]]
+position = Vector2(960, 540)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("1_3stef")
+script = ExtResource("2_lexsh")
+
+[node name="0" type="Sprite2D" parent="player1/turncount"]
+position = Vector2(0, 50)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_ejst4")
+
+[node name="1" type="Sprite2D" parent="player1/turncount"]
+position = Vector2(50, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_ejst4")
+
+[node name="2" type="Sprite2D" parent="player1/turncount"]
+position = Vector2(-50, 0)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_ejst4")
+
+[node name="3" type="Sprite2D" parent="player1/turncount"]
+position = Vector2(0, -50)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("11_ejst4")

@@ -16,7 +16,7 @@ func _physics_process(_delta):
 		elif Global.select2.legalplacement.get_collider() == self:
 			var pawninstance = Global.pawnload.instantiate()
 			pawninstance.set_position(position)
-			if Global.playerturn: 
+			if Global.playerturn == 1: 
 				pawninstance.get_node("altsprite").visible = true
 				pawninstance.add_to_group("1")
 			else: pawninstance.add_to_group("0")

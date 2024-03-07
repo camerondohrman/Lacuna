@@ -35,11 +35,12 @@ func _physics_process(_delta):
 		if not Global.select:
 			updateconnections = true
 			drawconnections = true
-			selectable = false
+			selectcircle(true)
 			Global.select = self
 		elif Global.connected.has(self):
-			Global.deletegroup("potential")
 			selectable = false
+			Global.deletegroup("potential")
+			Global.select.selectcircle(false)
 			legalplacement = Line2D.new()
 			legalplacement.default_color = Color.MISTY_ROSE
 			legalplacement.width = 10
@@ -76,7 +77,11 @@ func _physics_process(_delta):
 					if result.collider.position.distance_to(position) > 100:
 						connected.append(result.collider)
 		if connected.size() == 0:
+			Global.allset = false
+			await get_tree().create_timer(.2).timeout
+			selectcircle(false)
 			Global.deselect()
+			Global.allset = true
 		Global.connected = connected
 		if drawconnections:
 			drawconnections = false
@@ -116,6 +121,13 @@ func _on_mouse_exited():
 	hovering = false
 	get_node("hover").stop()
 	
+func selectcircle(mode):
+	var tween = get_tree().create_tween()
+	if mode:
+		tween.tween_property(get_node("Select"), "scale", Vector2(1,1), .1)
+	else:
+		tween.tween_property(get_node("Select"), "scale", Vector2.ZERO, .1)
+	
 func hoveringqueue(mode):
 	if mode:
 		selectable = true
@@ -149,5 +161,7 @@ func endgame():
 	Global.changescore(pawnlabel, Global.colorint.find(color), 1)
 	z_index = 2
 	var tween = get_tree().get_root().create_tween()
+	Global.response -= 1
 	tween.tween_property(self,"position",closest.position,3).set_trans(Tween.TRANS_QUAD)
 	tween.tween_callback(self.queue_free)
+#	queue_free()

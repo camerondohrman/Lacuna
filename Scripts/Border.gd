@@ -6,6 +6,7 @@ var blue = preload("res://Planets/planetblue.tscn")
 var green = preload("res://Planets/planetgreen.tscn")
 var grey = preload("res://Planets/planetgrey.tscn")
 var orange = preload("res://Planets/planetorange.tscn")
+var tweenlength = 5
 func _ready():
 	randomize()
 	rotation_degrees = randf_range(0,360)
@@ -54,9 +55,12 @@ func _ready():
 
 	scale = Vector2.ZERO
 	var tween = get_tree().create_tween()
-	tween.tween_property(self, "scale", Vector2(1,1), 5).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(self, "scale", Vector2(1,1), tweenlength).set_trans(Tween.TRANS_QUAD)
 	tween.tween_callback(self.allset)
 	tween.tween_callback(Global.updateinv)
+	if Global.ai == 0:
+		await get_tree().create_timer(tweenlength).timeout
+		Global.aimove(0)
 
 func allset():
 	Global.allset = true

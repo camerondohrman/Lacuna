@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://btht38ih482vr"]
 
 [ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="1_d8m55"]
 [ext_resource type="Texture2D" uid="uid://csoodq6pnghyh" path="res://PNG/Player 1 Pawn.png" id="1_gmu1h"]

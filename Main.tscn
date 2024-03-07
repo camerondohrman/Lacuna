@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dhn5ond0movw1"]
+[gd_scene load_steps=29 format=3 uid="uid://bxmq2omaiygdr"]
 
 [ext_resource type="PackedScene" uid="uid://c0gkf6pubg6yf" path="res://Background.tscn" id="1_8hm0a"]
 [ext_resource type="PackedScene" uid="uid://j4ik53oc07ts" path="res://Inventory.tscn" id="1_bg6qw"]
@@ -6,22 +6,51 @@
 [ext_resource type="Texture2D" uid="uid://0awhuwp8cwt2" path="res://PNG/Pause.png" id="4_tjvt4"]
 [ext_resource type="Texture2D" uid="uid://cmog0jss54js2" path="res://PNG/Quit.png" id="5_5r45f"]
 [ext_resource type="Script" path="res://Scripts/Button.gd" id="6_lwd8n"]
+[ext_resource type="Texture2D" uid="uid://dcmllddhw3o8l" path="res://PNG/Quit Hover.png" id="6_vfm0u"]
 [ext_resource type="Texture2D" uid="uid://cyoymbskqdw0" path="res://PNG/Restart Button.png" id="7_6dq8m"]
 [ext_resource type="AudioStream" uid="uid://c73o85ftm2kdd" path="res://Audio/Cancel.wav" id="7_bgond"]
 [ext_resource type="AudioStream" uid="uid://dac1xo20n726v" path="res://Audio/C4 Long.wav" id="8_5qq0l"]
+[ext_resource type="Texture2D" uid="uid://bichjcftxdxc2" path="res://PNG/Restart Hover.png" id="9_p3d73"]
+[ext_resource type="Texture2D" uid="uid://dyv4l7x6blj" path="res://PNG/Player 2 Pawn.png" id="10_2h8fl"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jnjwf"]
 load_path = "res://.godot/imported/Player 2 Pawn.png-86727d3d9d9e13dedd72b8d31ca75bb9.ctex"
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jh65"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a1dju"]
+texture = ExtResource("5_5r45f")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i4fk6"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_heomx"]
+texture = ExtResource("6_vfm0u")
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l8n2o"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxxxr"]
+texture = ExtResource("5_5r45f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oe3tk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2tc7s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dy6ui"]
+texture = ExtResource("7_6dq8m")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kvoqy"]
+texture = ExtResource("9_p3d73")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dphe"]
+texture = ExtResource("7_6dq8m")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1lgt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yk6r3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rt5wy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2q2du"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fxhoa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ixfhv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_htri5"]
 
 [node name="Main" type="Node2D"]
 
@@ -60,12 +89,11 @@ offset_left = 786.04
 offset_top = -969.0
 offset_right = 1036.04
 offset_bottom = -719.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_7jh65")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i4fk6")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_l8n2o")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_w1lgt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_yk6r3")
-icon = ExtResource("5_5r45f")
+theme_override_styles/normal = SubResource("StyleBoxTexture_a1dju")
+theme_override_styles/hover = SubResource("StyleBoxTexture_heomx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uxxxr")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_oe3tk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2tc7s")
 script = ExtResource("6_lwd8n")
 
 [node name="endgame" type="Button" parent="PauseMenu/Control"]
@@ -75,13 +103,42 @@ offset_left = 991.0
 offset_top = -690.0
 offset_right = 1241.0
 offset_bottom = -440.0
-theme_override_styles/normal = SubResource("StyleBoxEmpty_7jh65")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_i4fk6")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_l8n2o")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dy6ui")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kvoqy")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8dphe")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_w1lgt")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yk6r3")
-icon = ExtResource("7_6dq8m")
 script = ExtResource("6_lwd8n")
+
+[node name="switchai" type="Button" parent="PauseMenu/Control"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 1139.0
+offset_top = -409.0
+offset_right = 1389.0
+offset_bottom = -159.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rt5wy")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2q2du")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fxhoa")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ixfhv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_htri5")
+script = ExtResource("6_lwd8n")
+
+[node name="0" type="Sprite2D" parent="PauseMenu/Control/switchai"]
+visible = false
+position = Vector2(125, 125)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("10_2h8fl")
+
+[node name="1" type="Sprite2D" parent="PauseMenu/Control/switchai"]
+position = Vector2(125, 125)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_rc3du")
+
+[node name="2" type="Sprite2D" parent="PauseMenu/Control/switchai"]
+visible = false
+position = Vector2(125, 125)
+texture = ExtResource("6_vfm0u")
 
 [node name="Cancel" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_bgond")
@@ -91,3 +148,4 @@ stream = ExtResource("8_5qq0l")
 
 [connection signal="pressed" from="PauseMenu/Control/quit" to="PauseMenu/Control/quit" method="_on_pressed"]
 [connection signal="pressed" from="PauseMenu/Control/endgame" to="PauseMenu/Control/endgame" method="_on_pressed"]
+[connection signal="pressed" from="PauseMenu/Control/switchai" to="PauseMenu/Control/switchai" method="_on_pressed"]

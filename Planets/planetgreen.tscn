@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://docp2xk25tmt0"]
+[gd_scene load_steps=15 format=3 uid="uid://docp2xk25tmt0"]
 
 [ext_resource type="Script" path="res://Scripts/Planet.gd" id="1_b6lyo"]
 [ext_resource type="Shape2D" uid="uid://s23d0sqxh52d" path="res://Planets/flowercollider.tres" id="2_y0q5a"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bgrux4bnh0tf8" path="res://PNG/Planets/Green/Green Planet 7.png" id="10_hjcgh"]
 [ext_resource type="AudioStream" uid="uid://dymvi082e2kiy" path="res://Audio/green.wav" id="11_oq1yg"]
 [ext_resource type="AudioStream" uid="uid://ct2afcxhei3l4" path="res://Audio/G3 Long.wav" id="12_utvwd"]
+[ext_resource type="Texture2D" uid="uid://bdu7gj2e2v40x" path="res://PNG/Select.png" id="13_uli27"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qtmot"]
 animations = [{
@@ -64,6 +65,10 @@ stream = ExtResource("11_oq1yg")
 
 [node name="hover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_utvwd")
+
+[node name="Select" type="Sprite2D" parent="."]
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("13_uli27")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
